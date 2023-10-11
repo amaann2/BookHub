@@ -1,0 +1,29 @@
+.order-card {
+
+    border-bottom: 1px solid rgb(186, 178, 178);
+}
+
+.order-header {
+    padding: 1.7rem;
+    background-color: white;
+}
+
+
+.order-img {
+    width: 70px;
+    margin: 1.5rem;
+}
+
+.order-img img {
+    width: 100%;
+}
+
+.order-body {
+    display: flex;
+    margin: 1.5rem;
+    background-color: #f5f5f5;
+}
+
+.order-info {
+    padding: .3rem 2rem;
+}

@@ -1,0 +1,26 @@
+.offer {
+    background: var(--main-color);
+    margin-top: 80px;
+    padding: 30px 0;
+    color: white;
+}
+
+small {
+    color: white;
+}
+
+.offer img {
+    /* padding: 50px; */
+    margin-left: 25rem;
+    width: 15rem;
+}
+
+.offer-btn {
+    background-color: var(--btn-hover);
+}
+
+@media screen and (max-width:1300px) {
+    .offer img {
+        margin-left: 0;
+    }
+}

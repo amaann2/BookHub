@@ -1,0 +1,17 @@
+.counter {
+    background-color: #380b46;
+    color: white;
+    padding: 5rem 0;
+}
+
+.counter-heading {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.counter-info {
+    font-size: 1.3rem;
+    text-align: center;
+    color: grey;
+}

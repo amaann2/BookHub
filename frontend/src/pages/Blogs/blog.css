@@ -1,0 +1,66 @@
+.blog-card {
+    display: flex;
+    margin: 3rem 7rem;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.blog-cover {
+    width: 30rem;
+}
+
+.blog-info {
+    margin-left: 2rem;
+}
+
+.blog-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.blog-intro {
+    font-size: 1.3rem;
+}
+
+.singleblog-image {
+    width: 75%;
+    height: 30rem;
+    margin: 0 15rem;
+}
+
+
+.singleblog-title {
+    margin: 3rem 15rem;
+    font-size: 3rem;
+}
+
+.blog-content {
+    margin: 3rem 15rem;
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width:800px) {
+    .blog-card {
+        /* height: 30rem; */
+        margin: 0rem 0rem;
+
+    }
+
+    .blog-cover {
+        width: 10rem;
+
+    }
+
+    .singleblog-image {
+        margin: 0 0rem;
+    }
+
+
+    .singleblog-title {
+        margin: 0rem 0rem;
+    }
+
+    .blog-content {
+        margin: 0rem 0rem;
+    }
+}

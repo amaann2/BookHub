@@ -1,0 +1,21 @@
+.page_404 {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.page_404 img {
+    width: 400px;
+}
+
+
+.four_zero_four_bg h1 {
+    font-size: 50px;
+}
+
+
+@media screen and (max-width:800px) {
+    .page_404 img {
+        width: 300px;
+    }
+    
+}

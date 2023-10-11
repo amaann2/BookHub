@@ -1,0 +1,81 @@
+/*
+---01 TYPOGRAPHY ----
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    
+- FONT WEIGHTS
+default 400 , 500 , 600 , 700
+
+- LINE HEIGHT 
+defaul :1
+small : 1.05
+paragraph default:  1.6
+
+ -letter spacing
+0.5
+0.75px
+
+---- 02 COLORS ---
+
+- primary : #e67e22
+- tints: 
+#fdf2e9  
+#fae5d3
+
+- shades: 
+- Accents: 
+- Greys: 
+#555
+#333
+
+resources : 
+1) https://maketintsandshades.com/#e67e22 -- tint and shades generator from brand colors
+2) https://coolors.co/?home ---- contrast checker (poor or good)
+
+--- 05 SHADOWS ---
+
+--- 06 BORDER RADIUS ---
+default : 9px
+medium : 11px
+--- 07 WHITESPACES ----
+
+   
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@300;400;500;600&family=Rubik:wght@400;500;600;700&family=Ubuntu:wght@500&family=Ysabeau+Infant:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #8a2aaa;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+
+    --btn-hover: #451555
+}

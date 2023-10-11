@@ -1,0 +1,23 @@
+.about {
+    margin: 7rem 0;
+}
+
+.about-subtitle {
+    margin: 4rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.about-list {
+    margin: 0rem 0 4rem 0;
+}
+
+.about-list li {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.about p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}

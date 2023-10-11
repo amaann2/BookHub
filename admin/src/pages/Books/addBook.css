@@ -1,0 +1,64 @@
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0.3em;
+}
+
+.label {
+    font-weight: 700;
+    color: white;
+    line-height: 1.8rem;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.required-star {
+    color: white;
+}
+
+input,
+select,
+option {
+
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 15px 0px;
+    background-color: #384256;
+    outline: none;
+    color: white;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 15px 0px;
+    background-color: #384256;
+    outline: none;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.jodit-wysiwyg {
+    background-color: #384256;
+}

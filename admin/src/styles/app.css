@@ -1,0 +1,104 @@
+.app-container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+
+.col-2 img {
+    max-width: 100%;
+    padding: 90px 0px;
+
+}
+
+.shadow {
+    filter: drop-shadow(5px 20px 10px #555);
+}
+
+.col-2 h1 {
+    font-size: 5.5rem;
+    line-height: 60px;
+    margin: 25px 0px;
+}
+
+
+
+
+
+
+.mt-12 {
+    margin-top: 12rem;
+}
+
+
+
+
+.appbtn {
+    display: inline-block;
+    background-color: #8a2aaa;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 3px;
+    transition: 0.5s;
+    border: none;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.appbtn:hover {
+    background-color: #451555;
+}
+
+
+.admin-btn {
+    display: inline-block;
+    padding: 2px 24px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    transition: 0.3s;
+    border: none;
+    font-size: 1rem;
+    height: 3rem;
+    text-decoration: none
+}
+
+.admin-btn:hover {
+    background-color: #384256;
+    color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+
+    .col-2,
+    .col-3,
+    .col-4 {
+        flex-basis: 100%;
+    }
+
+    .mt-12 {
+        margin-top: 4rem;
+    }
+}

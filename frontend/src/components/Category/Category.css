@@ -1,0 +1,16 @@
+.category-card {
+    border: 1px solid black;
+    padding: 3.4rem 5rem;
+    border-radius: 6px;
+    /* background: linear-gradient(to right, rgba(96, 83, 101, 0.4),
+            rgba(138, 42, 170, 0.4)); */
+    background: linear-gradient(to right, rgba(138, 42, 170, 0.4),
+            rgba(190, 145, 190, 0.4));
+    margin-bottom: 5rem;
+
+}
+
+.category {
+    margin: 8rem 0;
+
+}

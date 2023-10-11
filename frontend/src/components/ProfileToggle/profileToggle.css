@@ -1,0 +1,22 @@
+.profile-toggle {
+    border-radius: 2px;
+    background-color: white;
+    width: 170px;
+    position: absolute;
+    top: 7.2rem;
+    right: 2rem;
+    padding: 1rem;
+}
+
+.profile-toggle-p {
+    font-size: 1.7rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .profile-toggle {
+        top: 30rem;
+        right: 9rem;
+    }
+}

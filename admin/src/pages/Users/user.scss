@@ -1,0 +1,23 @@
+.MuiDataGrid-root {
+    background-color: white;
+}
+
+.MuiDataGrid-columnHeadersInner {
+    background-color: #222b3c;
+    color: white;
+}
+
+.box {
+    .info {
+        margin: 1.4rem 0;
+    }
+}
+
+.custom-data-grid .MuiDataGrid-row {
+    margin-bottom: 10px;
+}
+
+.MuiDataGrid-toolbarContainer {
+    flex-direction: row-reverse;
+
+}

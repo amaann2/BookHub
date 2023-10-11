@@ -1,0 +1,182 @@
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+
+.col-2 img {
+    max-width: 100%;
+    padding: 90px 0px;
+
+}
+
+.shadow {
+    filter: drop-shadow(5px 20px 10px #555);
+}
+
+.col-2 h1 {
+    font-size: 5.5rem;
+    line-height: 60px;
+    margin: 25px 0px;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+
+}
+
+
+.col-5 {
+    width: 160px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(70%);
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: 0.5s;
+}
+
+.col-4:hover {
+    transform: translateY(-5px);
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.mt-12 {
+    margin-top: 12rem;
+}
+
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 3px;
+    transition: 0.5s;
+    border: none;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 5rem;
+    position: relative;
+    line-height: 6rem;
+    color: #555;
+    font-size: 2.5rem;
+}
+
+.title::after {
+    content: '';
+    background: var(--main-color);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filter {
+    margin-bottom: 2rem;
+}
+
+h4 {
+    color: #555;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.white {
+    color: white;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.purple {
+    color: var(--main-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+
+    .col-2,
+    .col-3,
+    .col-4 {
+        flex-basis: 100%;
+    }
+
+    .mt-12 {
+        margin-top: 4rem;
+    }
+}

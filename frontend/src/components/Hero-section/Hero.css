@@ -1,0 +1,11 @@
+.hero {
+    background-image: linear-gradient(to right, rgba(14, 12, 12, 0.6),
+            rgba(138, 42, 170, 0.2)), url("./../../assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    color: white;
+}
+.hero-desc{
+    font-size: 1.4rem;
+}

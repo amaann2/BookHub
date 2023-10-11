@@ -1,0 +1,38 @@
+.book-toggle {
+    border-radius: 2px;
+    background-color: white;
+    width: 44rem;
+    position: absolute;
+    top: 7.8rem;
+    left: 23%;
+    padding: 1rem;
+    min-height: 5vh;
+    max-height: 50vh;
+    overflow-y: scroll;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+}
+
+
+.search-box {
+    margin: .5rem 0;
+    padding: .5rem 0;
+    display: flex;
+    border-bottom: .1px solid rgb(72, 72, 72);
+
+}
+
+.search-box .search-image {
+    width: 4rem;
+    cursor: pointer;
+    height: 5rem;
+}
+
+.search-box .info {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.search-box .info .search-title:hover {
+    text-decoration: underline;
+}

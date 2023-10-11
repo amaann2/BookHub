@@ -1,0 +1,44 @@
+.topbox {
+    h3 {
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .list {
+        color: white;
+
+        .listItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem .3rem;
+            border-bottom: 1px solid #384256;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .summary {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .summary-icon {
+                    font-size: 30px;
+                }
+
+                .summaryTexts {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .amount {
+                font-size: 19px;
+                font-weight: 700;
+
+            }
+        }
+    }
+}
