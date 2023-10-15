@@ -100,6 +100,8 @@ li.nav-link a:hover {
     margin-right: 14rem;
     outline: none;
     padding: 2rem;
+    position: absolute;
+    left: 23%;
 }
 
 

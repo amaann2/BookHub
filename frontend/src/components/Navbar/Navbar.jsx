@@ -79,11 +79,11 @@ const Navbar = () => {
                 <ul className="nav-links">
                     {location.pathname === '/' && (
                         <li className="nav-link">
-                            <input type="text" className="navbar-input" placeholder="search by book Name , author name" value={search} onChange={(e) => setSearch(e.target.value)} />
+                            <input type="text" className="navbar-input" placeholder="FInd Book here" value={search} onChange={(e) => setSearch(e.target.value)} />
                         </li>
                     )}
                     <li className="nav-link">
-                        <Link to="/">home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className="nav-link">
                         <Link to="/books">Books</Link>

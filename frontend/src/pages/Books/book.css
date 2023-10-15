@@ -6,6 +6,7 @@
 .head {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .productpage-heading {
@@ -26,10 +27,6 @@ option {
 }
 
 
-.page-active {
-    background-color: var(--btn-hover);
-}
-
 
 .pagination-btn {
     display: inline-block;
@@ -42,8 +39,18 @@ option {
     border: none;
     font-size: 1.6rem;
     text-decoration: none;
+    cursor: pointer;
 }
 
+.pagination-btn:hover {
+    background-color: rgb(230, 226, 226);
+    color: black;
+}
+
+
+.page-active {
+    background-color: var(--btn-hover);
+}
 
 
 @media screen and (max-width:800px) {

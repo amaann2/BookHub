@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllOrder } from "../../redux/Order/orderAction";
 import OrdersAction from "./OrdersAction";
 import { FallingLines } from 'react-loader-spinner';
+import toast from 'react-hot-toast'
 
 const Order = () => {
   const dispatch = useDispatch()
   const { orders, error, loading } = useSelector(state => state.orders)
 
   useEffect(() => {
-    if (error) console.log(error);
+    if (error) toast.error(error);
     dispatch(getAllOrder());
   }, [dispatch, error]);
   const [rowId, setRowId] = useState(null)
@@ -61,12 +62,12 @@ const Order = () => {
       </div>
 
       {loading ?
-      <FallingLines
-      color="white"
-      width="100"
-      visible={true}
-      ariaLabel='falling-lines-loading'
-  /> 
+        <FallingLines
+          color="white"
+          width="100"
+          visible={true}
+          ariaLabel='falling-lines-loading'
+        />
         : <DataGrid
           rows={orders}
           getRowId={row => row._id}

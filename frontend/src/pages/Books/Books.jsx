@@ -61,7 +61,7 @@ const Books = () => {
                 <div className="product-page">
                     <div className="row head">
                         <div className="col-2">
-                            <h2 className='productpage-heading'>ALL BOOKS</h2>
+                            <h2 className='productpage-heading'></h2>
                         </div>
                         <div className="filter">
                             <select onChange={handleCategoryChange}>
