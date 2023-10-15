@@ -2,12 +2,18 @@ import axios from 'axios'
 import './productcard.css'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
+import { useDispatch } from 'react-redux';
+import { getUserCart, totalUserCartQuantity } from '../../redux/cart/cartAction';
 const ProductCard = ({ book }) => {
     const { title, price, category, image, _id } = book
+    const dispatch = useDispatch();
     const AddItemToCart = async () => {
         try {
             const { data } = await axios.post(`/api/v1/cart/${_id}/add`, { quantity: 1 })
             toast.success(data.message)
+            dispatch(getUserCart());
+            dispatch(totalUserCartQuantity())
+
         } catch (error) {
             toast.error(error.response.data.message)
         }

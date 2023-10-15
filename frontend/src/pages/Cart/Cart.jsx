@@ -1,12 +1,12 @@
 import './cart.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
-import { getUserCart } from '../../redux/cart/cartAction'
+import { getUserCart, totalUserCartQuantity } from '../../redux/cart/cartAction'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import LoginNavigation from '../../components/LoginNavigation/LoginNavigation'
 
-import { Hourglass } from 'react-loader-spinner'
+import { Bars, Hourglass } from 'react-loader-spinner'
 import { Link } from 'react-router-dom'
 const Cart = () => {
     const dispatch = useDispatch()
@@ -19,6 +19,7 @@ const Cart = () => {
 
     useEffect(() => {
         dispatch(getUserCart())
+        dispatch(totalUserCartQuantity())
     }, [dispatch])
     useEffect(() => {
         if (cart?.books) {
@@ -32,6 +33,7 @@ const Cart = () => {
         try {
             const { data } = await axios.put(`/api/v1/cart/${id}/remove`)
             dispatch(getUserCart())
+            dispatch(totalUserCartQuantity())
             toast.success(data.message)
         } catch (error) {
             toast.error(error.response.data.message)
@@ -44,6 +46,7 @@ const Cart = () => {
             const { data } = await axios.patch(`/api/v1/cart/quantity`, { bookId: id, quantity: newQuantity })
             toast.success(data.message)
             dispatch(getUserCart())
+            dispatch(totalUserCartQuantity())
         } catch (error) {
             toast.error(error.response.data.message)
         }
@@ -55,6 +58,7 @@ const Cart = () => {
                 toast.success('Cart cleared')
             }
             dispatch(getUserCart())
+            dispatch(totalUserCartQuantity())
         } catch (error) {
             toast.error(error.response.data.message)
         }
@@ -74,6 +78,15 @@ const Cart = () => {
     }
     return (
         <>
+            {loading && <Bars
+                height="80"
+                width="80"
+                color="#8a2aaa"
+                ariaLabel="bars-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />}
             <div className="small-container cart-page">
                 {isAuthentication ?
                     <>

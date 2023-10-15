@@ -75,8 +75,10 @@ exports.getUserCart = catchAsyncError(async (req, res, next) => {
   const userCart = await Cart.findOne({ user: req.user.id }).populate(
     "books.book"
   );
+
   res.status(200).json({
     status: "Sucess",
+    item: userCart.books.length,
     userCart,
   });
 });
@@ -97,5 +99,18 @@ exports.clearUserCart = catchAsyncError(async (req, res, next) => {
   res.status(204).json({
     status: "Success",
     message: "Cart cleared",
+  });
+});
+
+exports.totolUserCartQuantity = catchAsyncError(async (req, res) => {
+  const cart = await Cart.findOne({ user: req.user.id }).populate("books.book");
+  let quantity = 0;
+  cart.books.forEach((book) => {
+    quantity += book.quantity;
+  });
+  await cart.save();
+  res.status(200).json({
+    status: "Success",
+    total_quantity: quantity,
   });
 });

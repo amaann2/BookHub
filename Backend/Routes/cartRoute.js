@@ -5,6 +5,7 @@ const {
   removeBookFromCart,
   updateBookQuantity,
   clearUserCart,
+  totolUserCartQuantity,
 } = require("../Controller/cartController");
 const { isAuthenticated } = require("../Middleware/auth");
 const router = express.Router();
@@ -15,4 +16,6 @@ router.patch("/quantity", isAuthenticated, updateBookQuantity);
 
 router.get("/", isAuthenticated, getUserCart);
 router.delete("/delete", isAuthenticated, clearUserCart);
+
+router.get("/totolUserCartQuantity", isAuthenticated, totolUserCartQuantity);
 module.exports = router;

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BsBag } from "react-icons/bs";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileToggle from "../ProfileToggle/ProfileToggle";
@@ -11,19 +11,24 @@ import toast from "react-hot-toast";
 import { useEffect } from "react";
 import { getAllBook } from "../../redux/Book/bookAction";
 import SearchBookToggle from "../SearchBookToggle/SearchBookToggle";
+import { totalUserCartQuantity } from "../../redux/cart/cartAction";
 
 const Navbar = () => {
     const dispatch = useDispatch()
     const location = useLocation()
     const navigate = useNavigate()
     const { isAuthentication, currentUser } = useSelector((state) => state.user);
-    const { cart } = useSelector(state => state.cart)
+    const { quantity } = useSelector(state => state.cart)
 
     //* -------------responsive nabar----------------
     const [navIsOpen, setNavIsOpen] = useState(false);
     const toggleNav = () => {
         setNavIsOpen(!navIsOpen);
     };
+
+    useEffect(() => {
+        dispatch(totalUserCartQuantity())
+    }, [dispatch])
 
     //* --------toggle profile------------
     const [toggleProfile, setToggleProfile] = useState(false)
@@ -96,8 +101,10 @@ const Navbar = () => {
                     </li>
 
                     <li className="nav-link">
-                        <Link to="/cart" ><AiOutlineShoppingCart className="navbar-icon" /></Link>
-                        {cart?.books?.length !== 0 ? <div className="cart-item-indicator">.</div> : ''}
+                        <Link to="/cart" >
+                            <BsBag className="navbar-icon" />
+                            <span className="cart-item-indicator">{quantity ? quantity : ''}</span>
+                        </Link>
                     </li>
                     {
                         isAuthentication ?

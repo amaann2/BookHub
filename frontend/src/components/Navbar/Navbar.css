@@ -83,12 +83,12 @@ li.nav-link a:hover {
 
 .cart-item-indicator {
     position: relative;
-    bottom: 6px;
-    right: 13px;
-    background-color: var(--btn-hover);
-    border-radius: 50%;
-    width: 5px;
-    height: 5px;
+    right: 17px;
+    bottom: 4px;
+    font-size: 13px;
+    font-weight: bolder;
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 .navbar-input {

@@ -18,6 +18,7 @@ const Books = () => {
 
     useEffect(() => {
         dispatch(getAllCategory())
+        
     }, [dispatch])
 
     useEffect(() => {

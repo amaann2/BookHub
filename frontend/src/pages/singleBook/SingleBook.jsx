@@ -10,6 +10,7 @@ import toast from 'react-hot-toast';
 import Star from '../../components/star/Star';
 import { Bars } from 'react-loader-spinner';
 import Modal from '../../components/Modal/Modal';
+import { totalUserCartQuantity } from '../../redux/cart/cartAction';
 function SingleBook() {
     const { id } = useParams()
     const dispatch = useDispatch()
@@ -40,6 +41,7 @@ function SingleBook() {
             const quantityNumber = parseInt(quantity, 10)
             const { data } = await axios.post(`/api/v1/cart/${id}/add`, { quantity: quantityNumber })
             toast.success(data.message)
+            dispatch(totalUserCartQuantity())
         } catch (error) {
             toast.error(error.response.data.message)
         }
