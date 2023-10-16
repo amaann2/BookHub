@@ -3,7 +3,7 @@ import './account.css'
 import { useFormik } from 'formik'
 import { loginSchema } from "../../utils/validationSchema"
 import useFetch from "../../hooks/useFetch"
-import { ThreeDots } from "react-loader-spinner"
+import { Hourglass } from "react-loader-spinner"
 const initialValues = {
     email: "",
     password: ""
@@ -54,14 +54,15 @@ const Login = () => {
                                 />
                                 {errors.password && touched.password ? <p className="error-fields">{errors.password}</p> : null}
 
-                                <button className="btn" type="submit">{loading ? <ThreeDots
-                                    height="20"
-                                    width="20"
-                                    radius="9"
-                                    color="white"
-                                    ariaLabel="three-dots-loading"
-                                    visible={true}
-                                /> : 'login'}</button>
+                                <button className="btn" type="submit">
+                                    {loading ? <Hourglass
+                                        visible={true}
+                                        height="20"
+                                        width="20"
+                                        ariaLabel="hourglass-loading"
+                                        colors={['white', '#8a2aaa']}
+                                    /> : 'login'}
+                                </button>
 
                                 <p>
                                     Don't have an account ? <Link to="/register">Sign up</Link>

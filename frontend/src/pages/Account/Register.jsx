@@ -1,7 +1,7 @@
 import { useFormik } from "formik"
 import { Link } from "react-router-dom"
 import { registerSchema } from "../../utils/validationSchema"
-import { ThreeDots } from "react-loader-spinner"
+import { Hourglass } from "react-loader-spinner"
 
 import useFetch from "../../hooks/useFetch"
 const initialValues = {
@@ -88,14 +88,15 @@ const Register = () => {
                                 {errors.confirmPassword && touched.confirmPassword ? <p className="error-fields">{errors.confirmPassword}</p> : null}
 
                                 <p>By creating an account, I consent to the  processing <br /> of my  personal data in accordance with  the <br /> PRIVACY POLICY</p>
-                                <button className="btn" type="submit">{loading ? <ThreeDots
-                                    height="20"
-                                    width="20"
-                                    radius="9"
-                                    color="white"
-                                    ariaLabel="three-dots-loading"
-                                    visible={true}
-                                /> : 'Register'}</button>
+                                <button className="btn" type="submit">
+                                    {loading ? <Hourglass
+                                        visible={true}
+                                        height="20"
+                                        width="20"
+                                        ariaLabel="hourglass-loading"
+                                        colors={['white', '#8a2aaa']}
+                                    /> : 'Register'}
+                                </button>
 
                                 <p>
                                     Already have an account ? <Link to="/login"> login here</Link>

@@ -99,6 +99,8 @@
     border: none;
     font-size: 1.6rem;
     text-decoration: none;
+    cursor: pointer;
+
 }
 
 .btn:hover {
