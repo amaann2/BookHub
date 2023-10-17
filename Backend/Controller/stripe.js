@@ -3,6 +3,7 @@ const catchAsyncError = require("../Middleware/catchAsyncError");
 const Cart = require("../Model/cartModel");
 const Order = require("../Model/orderModel");
 const User = require("../Model/userModel");
+const sendEmail = require("../Utils/sendEmail");
 
 exports.checkout = catchAsyncError(async (req, res, next) => {
   const { currentUser } = req.body;
@@ -75,7 +76,7 @@ const createOrderCheckout = async (session) => {
   await cart.save();
   await Order.create(data);
 };
-exports.webHooks = (req, res) => {
+exports.webHooks = async (req, res) => {
   const sig = req.headers["stripe-signature"];
 
   let event;
@@ -90,12 +91,21 @@ exports.webHooks = (req, res) => {
     console.log(`Webhook Error : ${err.message}`);
     res.status(400).send(`Webhook Error: ${err.message}`);
   }
-
   if (event.type === "checkout.session.completed") {
     createOrderCheckout(event.data.object);
+  }
+  if (event.type === "invoice.payment_succeeded") {
+    const customerEmail = event.data.object.customer_email;
+    const invoicePdfLink = event.data.object.invoice_pdf;
+
+    await sendEmail({
+      email: customerEmail,
+      subject: "Your BookHub Receipt",
+      html: `<h2>Welcome to BookHub</h2> <p>Thank you for your purchase on BookHub! You can download your receipt by clicking on the link below:</p> <strong><a href="${invoicePdfLink}">Download Invoice</a></strong>`,
+    });
   }
 
   res.status(200).json({ recieve: true });
 };
 
-//  to run stripe ---------------  stripe listen --forward-to localhost:8080/webhook
+//  to run stripe - stripe listen --forward-to localhost:8080/webhook
