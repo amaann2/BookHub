@@ -1,4 +1,4 @@
-import {  useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { getSingleBlog } from "../../redux/Blogs/blogAction"
@@ -13,7 +13,7 @@ const SingleBlog = () => {
     }, [dispatch, id])
     return (
         <div className="container">
-            <img src={`http://localhost:8080/${blog?.cover}`} alt="cover" className="singleblog-image" />
+            <img src={`https://bookhub-wabd.onrender.com/${blog?.cover}`} alt="cover" className="singleblog-image" />
             <h1 className="singleblog-title">{blog?.title}</h1>
             <div className="blog-content" dangerouslySetInnerHTML={{ __html: blog?.content }}></div>
         </div>

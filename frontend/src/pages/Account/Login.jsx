@@ -64,12 +64,15 @@ const Login = () => {
                                     /> : 'login'}
                                 </button>
 
-                                <p>
-                                    Don't have an account ? <Link to="/register">Sign up</Link>
-                                </p>
-                                <p>
-                                    <Link to="/forgotPassword">Forgot password</Link>
-                                </p>
+                                <div className="form-para">
+                                    <p >
+
+                                        Don't have an account ? <Link to="/register">Sign up</Link>
+                                    </p>
+                                    <p>
+                                        <Link to="/forgotPassword">Forgot password</Link>
+                                    </p>
+                                </div>
                             </form>
                         </div>
                     </div>

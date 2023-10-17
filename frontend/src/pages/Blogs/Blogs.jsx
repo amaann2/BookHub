@@ -26,7 +26,7 @@ const Blogs = () => {
             /> :
                 blogs?.map((blog) => (
                     <div className="blog-card" key={blog?._id}>
-                        <img src={`http://localhost:8080/${blog.cover}`} alt="" className='blog-cover' />
+                        <img src={`https://bookhub-wabd.onrender.com/${blog.cover}`} alt="" className='blog-cover' />
                         <div className="blog-info">
                             <h2 className="blog-title">{blog?.title}</h2>
                             <p className="blog-intro">{blog?.summary}</p>

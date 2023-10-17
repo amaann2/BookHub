@@ -55,8 +55,8 @@ form>a {
 form>p {
     text-align: center;
     color: rgb(72, 72, 72);
-    margin-bottom: 10px;
-    font-size: 1.4rem;
+    /* margin-bottom: 10px; */
+    font-size: 1.2rem;
 }
 
 .checkbox {
@@ -68,6 +68,11 @@ form>p {
 .error-fields {
     color: red;
     text-align: left;
+}
+.form-para{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 @media screen and (max-width:800px) {
