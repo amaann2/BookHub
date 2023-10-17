@@ -37,7 +37,7 @@ const Login = () => {
                                     type="email"
                                     name="email"
                                     autoComplete="off"
-                                    placeholder="USERNAME"
+                                    placeholder="EMAIL ADDRESS"
                                     value={values.email}
                                     onChange={handleChange}
                                     onBlur={handleBlur}

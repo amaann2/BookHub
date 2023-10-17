@@ -69,7 +69,7 @@ const Register = () => {
                                 <input
                                     type="email"
                                     name="email"
-                                    placeholder="EMAIL"
+                                    placeholder="EMAIL ADDRESS"
                                     value={values.email}
                                     onChange={handleChange}
                                     onBlur={handleBlur}

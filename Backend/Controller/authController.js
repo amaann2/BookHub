@@ -129,13 +129,11 @@ exports.forgotPassword = catchAsyncError(async (req, res, next) => {
   const resetUrl = `${process.env.FRONTEND_URL}/resetPassword/${resetToken}`;
   const firstName = user.firstName;
 
-  const message = `Hello ${firstName},\n\n\n\We received a request to reset your password on BookHub. To create a new password and regain access to your account, please follow the link below: \n${resetUrl} \n\n This link will expire in 10 Minutes, so be sure to use it soon. If you didn't request a password reset, you can safely ignore this message, and your password will remain unchanged.\n\n\nThank you for using BookHub!`;
-
   try {
     await sendEmail({
       email: user.email,
       subject: "Reset Your BookHub Password (valid for 10 min)",
-      message,
+      html: `<h3>Hello ${firstName}</h3><p>We received a request to reset your password on BookHub.</p><p>To create a new password and regain access to your account, please follow the link below This link will expire in 10 Minutes, so be sure to use it soon.</p><h4> click here to reset the password : <a href=${resetUrl}>Reset Password </a> </h4><p> If you didn't request a password reset, you can safely ignore this message, and your password will remain unchanged</p><br/> <h5>Thank you for using BookHub!</h5>`,
     });
     res.status(200).json({
       status: "success",

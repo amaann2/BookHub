@@ -43,7 +43,7 @@ const ForgotPassword = () => {
                                     value={values.email}
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    placeholder="EMAIL"
+                                    placeholder="EMAIL ADDRESS"
                                 />
                                 {errors.email && touched.email ? <p className="error-fields">{errors.email}</p> : null}
                                 <button className="btn" type="submit">

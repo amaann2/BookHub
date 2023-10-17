@@ -6,7 +6,7 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import LoginNavigation from '../../components/LoginNavigation/LoginNavigation'
 
-import { Bars, Hourglass } from 'react-loader-spinner'
+import { Hourglass } from 'react-loader-spinner'
 import { Link } from 'react-router-dom'
 const Cart = () => {
     const dispatch = useDispatch()
@@ -78,15 +78,7 @@ const Cart = () => {
     }
     return (
         <>
-            {loading && <Bars
-                height="80"
-                width="80"
-                color="#8a2aaa"
-                ariaLabel="bars-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-            />}
+
             <div className="small-container cart-page">
                 {isAuthentication ?
                     <>
