@@ -24,6 +24,7 @@ import Error from './pages/cancelErrorSuccess/Error';
 import SuccessPage from './pages/cancelErrorSuccess/SuccessPage';
 import Blogs from './pages/Blogs/Blogs';
 import SingleBlog from './pages/Blogs/SingleBlog';
+import VerfiryEmail from './pages/Account/VerfiryEmail';
 axios.defaults.withCredentials = true
 function App() {
   useEffect(() => {
@@ -62,6 +63,7 @@ function App() {
         <Route path='/blog/:id' element={<SingleBlog />} />
         <Route path='/login' element={isAuthentication ? <Home /> : <Login />} />
         <Route path='/register' element={isAuthentication ? <Home /> : <Register />} />
+        <Route path='/verifyEmail/:token' element={isAuthentication ? <Home /> : <VerfiryEmail />} />
         <Route path='/forgotPassword' element={isAuthentication ? <Home /> : <ForgotPassword />} />
         <Route path='/resetPassword/:id' element={isAuthentication ? <Home /> : <ResetPassword />} />
         <Route path='/cancel' element={<CancelPage />} />

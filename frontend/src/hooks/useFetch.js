@@ -5,7 +5,7 @@ import { setCurrentUser } from "../redux/User/userAction";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-//* ------------- this custom hook is only for  login , signup , resetPassword ,and changeMYPassword --------------------
+//* ------------- this custom hook is only for  login ,  resetPassword ,and changeMYPassword --------------------
 
 function useFetch(url, method, body = null) {
   const [data, setData] = useState(null);

@@ -20,7 +20,6 @@ const ForgotPassword = () => {
                 setLoading(false)
                 toast.success(data.data.message)
                 action.resetForm()
-
             } catch (error) {
                 setLoading(false)
                 toast.error(error.response.data.message)

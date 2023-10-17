@@ -8,6 +8,7 @@ const {
   resetPassword,
   getMe,
   updatePassword,
+  verifyEmail,
 } = require("../Controller/authController");
 const {
   getUser,
@@ -17,9 +18,11 @@ const {
 } = require("../Controller/userController");
 const router = express.Router();
 
+router.post("/signup", signup);
+router.get("/confirmEmail/:token", verifyEmail);
 
 router.post("/login", login);
-router.post("/signup", signup);
+
 router.get("/logout", isAuthenticated, logout);
 
 router.post("/forgotPassword", forgotPassword);

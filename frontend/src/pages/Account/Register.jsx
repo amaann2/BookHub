@@ -4,6 +4,9 @@ import { registerSchema } from "../../utils/validationSchema"
 import { Hourglass } from "react-loader-spinner"
 
 import useFetch from "../../hooks/useFetch"
+import axios from "axios"
+import { useState } from "react"
+import toast from "react-hot-toast"
 const initialValues = {
     firstName: "",
     lastName: "",
@@ -12,13 +15,23 @@ const initialValues = {
     confirmPassword: ""
 }
 const Register = () => {
-    const { fetchData, loading } = useFetch()
+    const [loading, setLoading] = useState(false)
+
     const { values, errors, handleBlur, handleChange, handleSubmit, touched } = useFormik({
         initialValues,
         validationSchema: registerSchema,
-        onSubmit: (value, action) => {
-            fetchData('/api/v1/users/signup', 'post', value)
-            action.resetForm()
+        onSubmit: async (value, action) => {
+
+            try {
+                setLoading(true)
+                const { data } = await axios.post('/api/v1/users/signup', value)
+                setLoading(false)
+                toast.success(data.message)
+                action.resetForm()
+            } catch (error) {
+                setLoading(false)
+                toast.error(error.response.data.message)
+            }
         }
     })
     return (

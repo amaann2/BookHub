@@ -1,12 +1,28 @@
 const catchAsyncError = require("../Middleware/catchAsyncError");
 const Cart = require("../Model/cartModel");
+const Token = require("../Model/tokenModel");
 const User = require("../Model/userModel");
 const AppError = require("../Utils/AppError");
 const sendEmail = require("../Utils/sendEmail");
 const { createSendToken } = require("../Utils/sendToken");
 const crypto = require("crypto");
+const { emailVerification } = require("../Utils/verifyEmail");
+
+//?  @ route  POST api/v1/users/signup
+//?  @ desc    Register a new user account
+//?  @ access  public
 
 exports.signup = catchAsyncError(async (req, res, next) => {
+  const existingUser = await User.findOne({ email: req.body.email });
+
+  if (existingUser) {
+    return next(
+      new AppError(
+        "This email address is already associated with another account.",
+        400
+      )
+    );
+  }
   const user = await User.create(req.body);
 
   const newCart = new Cart({
@@ -15,8 +31,47 @@ exports.signup = catchAsyncError(async (req, res, next) => {
     totalPrice: 0,
   });
   await newCart.save();
-  createSendToken(user, 201, res);
+  emailVerification(user, res);
 });
+
+//?  @ route  POST api/v1/users/confirmEmail/:token
+//?  @ desc   verified email id (gmail.com)
+//?  @ access  public
+
+exports.verifyEmail = catchAsyncError(async (req, res, next) => {
+  const { token } = req.params;
+
+  const existingToken = await Token.findOne({ token });
+  if (!existingToken) {
+    return next(
+      new AppError(
+        "Your verification link may have expired. Please click on resend for verify your Email.",
+        400
+      )
+    );
+  }
+  const user = await User.findOne({ _id: existingToken.userId });
+  if (!user) {
+    return next(
+      new AppError(
+        "We Are unable to find the user for this verification! please sign up ",
+        400
+      )
+    );
+  }
+
+  user.isVerified = true;
+  await user.save({ validateBeforeSave: false });
+  res.status(200).json({
+    status: "Success",
+    message: "Your account has been successfully verified , please login",
+  });
+});
+
+//?  @ route  POST api/v1/users/login
+//?  @ desc   login user
+//?  @ access  public
+
 exports.login = catchAsyncError(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
@@ -25,11 +80,28 @@ exports.login = catchAsyncError(async (req, res, next) => {
     );
   }
   const user = await User.findOne({ email }).select("+password");
+
+  if (!user) {
+    return next(new AppError("There is no user with that email id", 400));
+  }
   if (!user || !(await user.comparePassword(password, user.password))) {
     return next(new AppError("Incorrect email and password", 400));
   }
+  if (!user.isVerified) {
+    return next(
+      new AppError(
+        "your account is not verfied, please verified first then login again",
+        401
+      )
+    );
+  }
   createSendToken(user, 201, res);
 });
+
+//?  @ route  POST api/v1/users/logout
+//?  @ desc   logout user
+//?  @ access  private
+
 exports.logout = catchAsyncError(async (req, res, next) => {
   res.cookie("jwt", null, {
     expires: new Date(Date.now()),
@@ -41,17 +113,18 @@ exports.logout = catchAsyncError(async (req, res, next) => {
   });
 });
 
+//?  @ route  POST api/v1/users/forgotPassword
+//?  @ desc   forgot Password
+//?  @ access  private
+
 exports.forgotPassword = catchAsyncError(async (req, res, next) => {
-  // TODO: get user based on posted email
   const user = await User.findOne({ email: req.body.email });
   if (!user) {
     return next(new AppError("There is no user with email address", 404));
   }
-  // TODO: Generate the random token
+
   const resetToken = user.createResetToken();
   await user.save({ validateBeforeSave: false });
-
-  //TODO: send it to user email
 
   const resetUrl = `${process.env.FRONTEND_URL}/resetPassword/${resetToken}`;
   const firstName = user.firstName;
@@ -81,8 +154,11 @@ exports.forgotPassword = catchAsyncError(async (req, res, next) => {
   }
 });
 
+//?  @ route  POST api/v1/users/resetPassword/:token
+//?  @ desc   reset password
+//?  @ access  private
+
 exports.resetPassword = catchAsyncError(async (req, res, next) => {
-  // TODO: Get user based on token
   const hashedToken = crypto
     .createHash("sha256")
     .update(req.params.token)
@@ -93,7 +169,6 @@ exports.resetPassword = catchAsyncError(async (req, res, next) => {
     passwordResetExpires: { $gt: Date.now() },
   });
 
-  // TODO: IF token has not expired , and there is user , set the new password
   if (!user) {
     return next(new AppError("Token is invalid or has expired", 400));
   }
@@ -101,29 +176,33 @@ exports.resetPassword = catchAsyncError(async (req, res, next) => {
   user.confirmPassword = req.body.confirmPassword;
   user.passwordResetToken = undefined;
   user.passwordResetExpires = undefined;
+
   await user.save();
-  // TODO: update changePasswordAt property for the user - implemented in the userschma.pre('save')  method
-  // TODO: Log the user in , send JWT
   createSendToken(user, 200, res);
 });
+
+//?  @ route  POST api/v1/users/getMe
+//?  @ desc   get current logged in user
+//?  @ access  private
+
 exports.getMe = (req, res, next) => {
   req.params.id = req.user.id;
   next();
 };
 
+//?  @ route  POST api/v1/users/updateMyPassword
+//?  @ desc   update own password
+//?  @ access  private
+
 exports.updatePassword = catchAsyncError(async (req, res, next) => {
-  //TODO: Get user from collection
   const user = await User.findById(req.user.id).select("+password");
 
-  //TODO: Check if POSTed current password is correct
   if (!(await user.comparePassword(req.body.currentPassword, user.password))) {
     return next(new AppError("Your current password is wrong", 401));
   }
-  // TODO: If so , update password
   user.password = req.body.password;
   user.confirmPassword = req.body.confirmPassword;
   await user.save();
 
-  // TODO: Log user in , send JWT
   createSendToken(user, 200, res);
 });

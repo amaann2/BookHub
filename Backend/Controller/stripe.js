@@ -1,10 +1,8 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const catchAsyncError = require("../Middleware/catchAsyncError");
-const Book = require("../Model/bookModel");
 const Cart = require("../Model/cartModel");
 const Order = require("../Model/orderModel");
 const User = require("../Model/userModel");
-const AppError = require("../Utils/AppError");
 
 exports.checkout = catchAsyncError(async (req, res, next) => {
   const { currentUser } = req.body;

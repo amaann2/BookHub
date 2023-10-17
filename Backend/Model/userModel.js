@@ -18,7 +18,7 @@ const userSchema = mongoose.Schema({
   email: {
     type: String,
     required: [true, "please enter email id"],
-    unique: true,
+    unique: [true],
     lowercase: true,
     validate: [validator.isEmail, "Please Enter a valid email address"],
   },
@@ -57,6 +57,10 @@ const userSchema = mongoose.Schema({
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
+  isVerified: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 userSchema.pre("save", async function (next) {

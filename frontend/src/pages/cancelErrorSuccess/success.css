@@ -23,9 +23,10 @@
     font-weight: lighter;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 1em;
+    font-size: 2em;
     margin-top: -.2em;
     margin-bottom: 0;
+    font-weight: bold;
 }
 
 #lower-side {
@@ -39,5 +40,6 @@
 #message {
     margin-top: -.5em;
     color: #757575;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    font-size: 1.5rem;
 }
