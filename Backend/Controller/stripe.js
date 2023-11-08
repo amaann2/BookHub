@@ -95,13 +95,15 @@ exports.webHooks = async (req, res) => {
     createOrderCheckout(event.data.object);
   }
   if (event.type === "invoice.payment_succeeded") {
+    console.log(event.data.object);
     const customerEmail = event.data.object.customer_email;
     const invoicePdfLink = event.data.object.invoice_pdf;
+    const hosted_invoice_url = event.data.object.hosted_invoice_url;
 
     await sendEmail({
       email: customerEmail,
       subject: "Your BookHub Receipt",
-      html: `<h2>Welcome to BookHub</h2> <p>Thank you for your purchase on BookHub! You can download your receipt by clicking on the link below:</p> <strong><a href="${invoicePdfLink}">Download Invoice</a></strong>`,
+      html: `<h2>Welcome to BookHub</h2> <p>Thank you for your purchase on BookHub! You can download your receipt by clicking on the link below:</p> <strong><a href="${invoicePdfLink}">Download Invoice</a></strong>   <strong><a href="${hosted_invoice_url}">Download Invoice and Reciepe</a></strong>`,
     });
   }
 
