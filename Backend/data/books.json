@@ -1,0 +1,768 @@
+[{
+  "_id": {
+    "$oid": "6515142986ede4b0331305a0"
+  },
+  "title": "Atomic Habit",
+  "author": "Clear James",
+  "ISBN": "9781847941830",
+  "publish_date": {
+    "$date": "2018-10-15T00:00:00.000Z"
+  },
+  "pages": 456,
+  "description": "Atomic Habits by James Clear is a groundbreaking book that explores the power of small, incremental changes to transform your life. With practical insights and actionable strategies, Clear reveals how tiny habits can lead to remarkable personal growth and success.",
+  "price": 446,
+  "image": "https://m.media-amazon.com/images/I/51-nXsSRfZL.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 239,
+  "createdAt": {
+    "$date": "2023-09-28T05:50:33.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65156a2b52ac6921e8ab0b4d"
+  },
+  "title": "The Monk Who Sold His Ferrari",
+  "author": "Robin Sharma",
+  "ISBN": "978-0062515674",
+  "publish_date": {
+    "$date": "1999-04-21T00:00:00.000Z"
+  },
+  "pages": 224,
+  "description": "A transformative story about Julian Mantle, a successful lawyer who undergoes a spiritual journey in the Himalayas, ultimately leading to profound life changes. This book is a beacon for those seeking purpose and fulfillment",
+  "price": 899,
+  "image": "https://m.media-amazon.com/images/I/61OByUf1TfL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 100,
+  "createdAt": {
+    "$date": "2023-09-28T11:57:31.692Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651907339b599c75b141357c"
+  },
+  "title": "The Subtle Art of Not Giving a f*ck",
+  "author": "Mark Manson",
+  "ISBN": "9780062457714",
+  "publish_date": {
+    "$date": "2016-09-13T00:00:00.000Z"
+  },
+  "pages": 224,
+  "description": "In this no-nonsense guide to living a good life, Mark Manson cuts through the self-help clichés to deliver a refreshingly honest approach to personal development.",
+  "price": 320,
+  "image": "https://m.media-amazon.com/images/I/51mN3bY0JjL.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 1200,
+  "createdAt": {
+    "$date": "2023-10-01T05:44:19.257Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6519081f9b599c75b1413596"
+  },
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "ISBN": "9780061120084",
+  "publish_date": {
+    "$date": "2016-09-13T00:00:00.000Z"
+  },
+  "pages": 336,
+  "description": "Harper Lee's timeless classic explores themes of racial injustice and moral growth in the American South during the 1930s.",
+  "price": 1280,
+  "image": "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651906599b599c75b1413578"
+    }
+  ],
+  "stock": 18,
+  "createdAt": {
+    "$date": "2023-10-01T05:48:15.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651908ba9b599c75b14135a0"
+  },
+  "title": "Elon Musk",
+  "author": "Ashlee Vance",
+  "ISBN": "0062301239",
+  "publish_date": {
+    "$date": "2015-05-19T00:00:00.000Z"
+  },
+  "pages": 400,
+  "description": "In this riveting biography, Ashlee Vance provides an in-depth look into the life and achievements of Elon Musk, the visionary entrepreneur behind SpaceX, Tesla, and other groundbreaking companies. Discover Musk's journey from his early days to becoming one of the most influential figures in technology and space exploration.",
+  "price": 2000,
+  "image": "https://images-eu.ssl-images-amazon.com/images/I/81KAg5fnOhL._AC_UL750_SR750,750_.jpg",
+  "category": [
+    {
+      "$oid": "6519062b9b599c75b1413576"
+    }
+  ],
+  "stock": 54,
+  "createdAt": {
+    "$date": "2023-10-01T05:50:50.356Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6519098f9b599c75b14135aa"
+  },
+  "title": "Die Hard",
+  "author": "Roderick Thorp",
+  "ISBN": "9781234567890",
+  "publish_date": {
+    "$date": "1988-01-01T00:00:00.000Z"
+  },
+  "pages": 320,
+  "description": "In this action-packed thriller, Roderick Thorp takes you on a heart-pounding journey as NYPD officer John McClane battles terrorists to save hostages in a Los Angeles skyscraper. The basis for the iconic film franchise, 'Die Hard' is a classic of the action genre.",
+  "price": 1999,
+  "image": "https://m.media-amazon.com/images/I/810hsM-h3tL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "6519054d9b599c75b1413568"
+    }
+  ],
+  "stock": 39,
+  "createdAt": {
+    "$date": "2023-10-01T05:54:23.800Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65190a069b599c75b14135b4"
+  },
+  "title": "The Guns of August",
+  "author": "Barbara W. Tuchman",
+  "ISBN": "9780345476098",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-228787200000"
+    }
+  },
+  "pages": 640,
+  "description": "Barbara W. Tuchman's Pulitzer Prize-winning classic presents a gripping account of the events leading up to World War I. With meticulous research and a compelling narrative, Tuchman explores the political and military decisions that plunged the world into one of its deadliest conflicts.",
+  "price": 950,
+  "image": "https://m.media-amazon.com/images/I/81ijRAC+c3L._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651905b89b599c75b141356c"
+    }
+  ],
+  "stock": 96,
+  "createdAt": {
+    "$date": "2023-10-01T05:56:22.635Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65190a839b599c75b14135b6"
+  },
+  "title": "Death of a Salesman",
+  "author": "Arthur Miller",
+  "ISBN": "9780140481341",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-659232000000"
+    }
+  },
+  "pages": 139,
+  "description": "Arthur Miller's iconic play 'Death of a Salesman' delves into the American Dream and its discontents. Follow the tragic story of Willy Loman, a salesman who grapples with disillusionment and the pursuit of success in post-war America.",
+  "price": 500,
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/20/DeathOfASalesman.jpg",
+  "category": [
+    {
+      "$oid": "651905779b599c75b141356a"
+    }
+  ],
+  "stock": 49,
+  "createdAt": {
+    "$date": "2023-10-01T05:58:27.488Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6519b68f1759642d02e0a19b"
+  },
+  "title": "Genghis Khan and the Making of the Modern World",
+  "author": "Jack Weatherford",
+  "ISBN": "978-0609809648",
+  "publish_date": {
+    "$date": "2005-03-22T00:00:00.000Z"
+  },
+  "pages": 352,
+  "description": "Genghis Khan and the Making of the Modern World is a historical book that explores the life and impact of Genghis Khan, the founder of the Mongol Empire. Jack Weatherford provides a fascinating account of how Genghis Khan's innovative leadership and cultural contributions shaped the course of history.",
+  "price": 3499,
+  "image": "https://m.media-amazon.com/images/I/91MrxdduTtL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651905b89b599c75b141356c"
+    }
+  ],
+  "stock": 898,
+  "createdAt": {
+    "$date": "2023-10-01T18:12:31.397Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb529c057eabb3fd56c27"
+  },
+  "title": "Hyper Focus",
+  "author": "Chris Bailey",
+  "ISBN": "9781101988218",
+  "publish_date": {
+    "$date": "2018-08-28T00:00:00.000Z"
+  },
+  "pages": 252,
+  "description": "In 'Hyper Focus,' Chris Bailey explores the science of focus and shares practical techniques to improve your concentration and productivity. Discover how to manage distractions, set meaningful goals, and make the most of your attention to achieve your objectives.",
+  "price": 380,
+  "image": "https://m.media-amazon.com/images/I/81QlSiSIiSL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 1697,
+  "createdAt": {
+    "$date": "2023-10-05T13:07:53.380Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb61fc057eabb3fd56c42"
+  },
+  "title": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "ISBN": "9780141439518",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-4952102400000"
+    }
+  },
+  "pages": 277,
+  "description": "Pride and Prejudice is a classic novel by Jane Austen. Set in the early 19th century, it explores themes of love, class, and society through the story of Elizabeth Bennet and Mr. Darcy. With wit and humor, Austen's timeless tale continues to captivate readers around the world.",
+  "price": 3500,
+  "image": "https://m.media-amazon.com/images/I/51tiK-eB3JL.jpg",
+  "category": [
+    {
+      "$oid": "651906599b599c75b1413578"
+    }
+  ],
+  "stock": 3200,
+  "createdAt": {
+    "$date": "2023-10-05T13:11:59.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb67bc057eabb3fd56c4b"
+  },
+  "title": "Steve Jobs",
+  "author": "Walter Isaacson",
+  "ISBN": "9781451648539",
+  "publish_date": {
+    "$date": "2011-10-24T00:00:00.000Z"
+  },
+  "pages": 656,
+  "description": "Steve Jobs, the biography by Walter Isaacson, provides an in-depth look at the life and career of the co-founder of Apple Inc. This remarkable book delves into the genius, creativity, and complex personality of Steve Jobs, taking readers on a journey through the world of technology, innovation, and design.",
+  "price": 1999,
+  "image": "https://m.media-amazon.com/images/I/81NSb9Jy0HL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "6519062b9b599c75b1413576"
+    }
+  ],
+  "stock": 20000,
+  "createdAt": {
+    "$date": "2023-10-05T13:13:31.606Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb6e8c057eabb3fd56c54"
+  },
+  "title": "Romeo and Juliet",
+  "author": "William Shakespeare",
+  "ISBN": "9780743477116",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-11768889600000"
+    }
+  },
+  "pages": 288,
+  "description": "Romeo and Juliet is one of William Shakespeare's most famous tragedies. Set in Verona, Italy, it tells the story of two young lovers from feuding families, the Montagues and the Capulets. Their love defies the odds and leads to a series of tragic events that ultimately brings peace to their warring families.",
+  "price": 500,
+  "image": "https://m.media-amazon.com/images/I/51y7tS0UsTL.jpg",
+  "category": [
+    {
+      "$oid": "651905779b599c75b141356a"
+    }
+  ],
+  "stock": 8002,
+  "createdAt": {
+    "$date": "2023-10-05T13:15:20.974Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb759c057eabb3fd56c71"
+  },
+  "title": "You Are a Badass",
+  "author": "Jen Sincero",
+  "ISBN": "9780762447695",
+  "publish_date": {
+    "$date": "2013-04-23T00:00:00.000Z"
+  },
+  "pages": 256,
+  "description": "You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life is a self-help book by Jen Sincero that aims to inspire and empower readers to embrace their inner badassery. With humor and practical advice, Sincero guides you on a journey to transform your life and unlock your full potential.",
+  "price": 350,
+  "image": "https://m.media-amazon.com/images/I/71SUujKRkdL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 900,
+  "createdAt": {
+    "$date": "2023-10-05T13:17:13.002Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb7e1c057eabb3fd56cb4"
+  },
+  "title": "The Diary of a Young Girl",
+  "author": "Anne Frank",
+  "ISBN": "9780385480338",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-710726400000"
+    }
+  },
+  "pages": 283,
+  "description": "The Diary of a Young Girl, also known as The Diary of Anne Frank, is a powerful and moving account of Anne Frank's life in hiding during the Holocaust. Her diary provides a unique perspective on the challenges and hopes of a young girl living through one of history's darkest periods.",
+  "price": 279,
+  "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1560816565l/48855.jpg",
+  "category": [
+    {
+      "$oid": "6519062b9b599c75b1413576"
+    }
+  ],
+  "stock": 699,
+  "createdAt": {
+    "$date": "2023-10-05T13:19:29.593Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb82fc057eabb3fd56cbd"
+  },
+  "title": "Leonardo da Vinci",
+  "author": "Walter Isaacson",
+  "ISBN": "987-1501139154",
+  "publish_date": {
+    "$date": "2017-10-17T00:00:00.000Z"
+  },
+  "pages": 624,
+  "description": "Leonardo da Vinci by Walter Isaacson is a captivating biography that delves into the life and genius of the Renaissance polymath. Isaacson provides a vivid portrayal of Leonardo's art, inventions, and extraordinary curiosity about the world, offering a comprehensive look at one of history's greatest minds.",
+  "price": 999,
+  "image": "https://m.media-amazon.com/images/I/91olmCLoVuL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "6519062b9b599c75b1413576"
+    }
+  ],
+  "stock": 12004,
+  "createdAt": {
+    "$date": "2023-10-05T13:20:47.931Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb88dc057eabb3fd56cc6"
+  },
+  "title": "Harry Potter",
+  "author": "v",
+  "ISBN": "9780590353427",
+  "publish_date": {
+    "$date": "1997-06-26T00:00:00.000Z"
+  },
+  "pages": 320,
+  "description": "Harry Potter and the Sorcerer's Stone is the first book in the iconic Harry Potter series. Join Harry as he discovers his magical heritage, attends Hogwarts School of Witchcraft and Wizardry, and embarks on adventures that will change his life forever.",
+  "price": 399,
+  "image": "https://m.media-amazon.com/images/I/71u-cpucTRL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651906599b599c75b1413578"
+    }
+  ],
+  "stock": 789,
+  "createdAt": {
+    "$date": "2023-10-05T13:22:21.632Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb916c057eabb3fd56cd9"
+  },
+  "title": "Mindset: The New Psychology of Success",
+  "author": "Carol S. Dweck",
+  "ISBN": "9780345472328",
+  "publish_date": {
+    "$date": "2006-12-26T00:00:00.000Z"
+  },
+  "pages": 320,
+  "description": "In 'Mindset: The New Psychology of Success', Carol S. Dweck presents a groundbreaking concept about the power of our mindset. She explores the difference between a 'fixed mindset' and a 'growth mindset' and how one's beliefs about their abilities can profoundly impact their success and personal development. Dweck provides valuable insights on how adopting a growth mindset can lead to a path of continuous improvement and achievement.",
+  "price": 700,
+  "image": "https://m.media-amazon.com/images/I/41vS70Qo3rL.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 10000,
+  "createdAt": {
+    "$date": "2023-10-05T13:24:38.782Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb95fc057eabb3fd56ce2"
+  },
+  "title": "The Gifts of Imperfection",
+  "author": "Brené Brown",
+  "ISBN": "9781592858491",
+  "publish_date": {
+    "$date": "2010-08-27T00:00:00.000Z"
+  },
+  "pages": 160,
+  "description": "In 'The Gifts of Imperfection,' Brené Brown explores the concept of embracing our imperfections and vulnerabilities as sources of strength and authenticity. Brown's research and insights guide readers on a journey to cultivate self-compassion and lead wholehearted lives.",
+  "price": 800,
+  "image": "https://m.media-amazon.com/images/I/81SnOscVFDL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 780,
+  "createdAt": {
+    "$date": "2023-10-05T13:25:51.074Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eb9c7c057eabb3fd56ceb"
+  },
+  "title": "Awaken the Giant Within",
+  "author": "Tony Robbins",
+  "ISBN": "9780743409384",
+  "publish_date": {
+    "$date": "1992-11-01T00:00:00.000Z"
+  },
+  "pages": 544,
+  "description": "Awaken the Giant Within by Tony Robbins is a bestselling self-help book that provides readers with the tools and strategies to take control of their emotions, finances, relationships, and life. Robbins shares insights on personal development and achieving one's goals.",
+  "price": 899,
+  "image": "https://m.media-amazon.com/images/I/61cJtN2mzhL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 10,
+  "createdAt": {
+    "$date": "2023-10-05T13:27:35.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eba19c057eabb3fd56cf4"
+  },
+  "title": "Brave New World",
+  "author": "Aldous Huxley",
+  "ISBN": "9780060850524",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-1199232000000"
+    }
+  },
+  "pages": 311,
+  "description": "Brave New World is a classic dystopian novel by Aldous Huxley. Set in a futuristic world where society is engineered for stability and happiness, it explores themes of technological control, individuality, and the consequences of a utopian society.",
+  "price": 7999,
+  "image": "https://m.media-amazon.com/images/I/91D4YvdC0dL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651906599b599c75b1413578"
+    }
+  ],
+  "stock": 786,
+  "createdAt": {
+    "$date": "2023-10-05T13:28:57.344Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651eba87c057eabb3fd56cfd"
+  },
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "ISBN": "9780061122415",
+  "publish_date": {
+    "$date": "1988-03-10T00:00:00.000Z"
+  },
+  "pages": 197,
+  "description": "The Alchemist is a bestselling novel by Brazilian author Paulo Coelho. It tells the story of Santiago, a shepherd boy who embarks on a journey to discover his personal legend and fulfill his dreams. Through a series of adventures and encounters, Santiago learns about the importance of following one's heart and pursuing one's dreams.",
+  "price": 1900,
+  "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
+  "category": [
+    {
+      "$oid": "651906599b599c75b1413578"
+    }
+  ],
+  "stock": 12000,
+  "createdAt": {
+    "$date": "2023-10-05T13:30:47.926Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651ebadec057eabb3fd56d06"
+  },
+  "title": "The Wright Brothers",
+  "author": "David McCullough",
+  "ISBN": "9781476728759",
+  "publish_date": {
+    "$date": "2015-05-05T00:00:00.000Z"
+  },
+  "pages": 336,
+  "description": "In The Wright Brothers, Pulitzer Prize-winning author David McCullough chronicles the extraordinary achievements of Wilbur and Orville Wright. This inspiring biography delves into the Wright brothers' relentless determination and innovative spirit, which paved the way for human flight.",
+  "price": 1298,
+  "image": "https://aliabdaal.com/wp-content/uploads/2023/01/the-wright-brothers-book-cover.jpg",
+  "category": [
+    {
+      "$oid": "651905b89b599c75b141356c"
+    }
+  ],
+  "stock": 1200,
+  "createdAt": {
+    "$date": "2023-10-05T13:32:14.762Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651ebb67c057eabb3fd56d6f"
+  },
+  "title": "A People's History of the United States",
+  "author": "Howard Zinn",
+  "ISBN": "9780062397348",
+  "publish_date": {
+    "$date": "1980-11-17T00:00:00.000Z"
+  },
+  "pages": 729,
+  "description": "A People's History of the United States by Howard Zinn presents a different perspective on American history, focusing on the experiences of everyday people, marginalized groups, and social movements. Zinn's work challenges traditional narratives and highlights the struggles and achievements of those often left out of the history books.",
+  "price": 550,
+  "image": "https://m.media-amazon.com/images/I/71Zb-D8NaGL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651905b89b599c75b141356c"
+    }
+  ],
+  "stock": 1789,
+  "createdAt": {
+    "$date": "2023-10-05T13:34:31.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651ebbbbc057eabb3fd56d78"
+  },
+  "title": "The Crucible",
+  "author": "Arthur Miller",
+  "ISBN": "9780142437339",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-534643200000"
+    }
+  },
+  "pages": 143,
+  "description": "Set in Salem, Massachusetts, during the witch trials of 1692, 'The Crucible' is a powerful and timeless drama that explores themes of hysteria, mass hysteria, and the consequences of fanaticism. Arthur Miller's play is a classic of American theater, known for its intense character development and thought-provoking commentary.",
+  "price": 1545,
+  "image": "https://m.media-amazon.com/images/I/816xX7LPvsL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651905779b599c75b141356a"
+    }
+  ],
+  "stock": 1234,
+  "createdAt": {
+    "$date": "2023-10-05T13:35:55.148Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651ebc26c057eabb3fd56d83"
+  },
+  "title": "Oedipus Rex",
+  "author": "Sophocles",
+  "ISBN": "9780140440034",
+  "publish_date": {
+    "$date": "2000-12-31T18:30:00.000Z"
+  },
+  "pages": 64,
+  "description": "Oedipus Rex, also known as Oedipus the King, is a famous ancient Greek tragedy written by Sophocles. It tells the story of Oedipus, the King of Thebes, who becomes entangled in a tragic fate that he desperately tries to avoid. The play explores themes of fate, free will, and the consequences of one's actions",
+  "price": 350,
+  "image": "https://m.media-amazon.com/images/I/51VZArBypPL.jpg",
+  "category": [
+    {
+      "$oid": "651905779b599c75b141356a"
+    }
+  ],
+  "stock": 10,
+  "createdAt": {
+    "$date": "2023-10-05T13:37:42.210Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651ebcc6c057eabb3fd56dd0"
+  },
+  "title": "The Hunt for Red October",
+  "author": "Tom Clancy",
+  "ISBN": "9780425133514",
+  "publish_date": {
+    "$date": "2011-10-12T00:00:00.000Z"
+  },
+  "pages": 429,
+  "description": "The Hunt for Red October\" is a thrilling military action novel. It follows the intense cat-and-mouse game between a Soviet submarine captain who wishes to defect to the United States and the pursuit of his submarine by both the Soviet and American navies",
+  "price": 1112,
+  "image": "https://m.media-amazon.com/images/I/81fgorwYviL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "6519054d9b599c75b1413568"
+    }
+  ],
+  "stock": 123,
+  "createdAt": {
+    "$date": "2023-10-05T13:40:22.679Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651ebd1bc057eabb3fd56dd9"
+  },
+  "title": "The Bourne Identity",
+  "author": "Robert Ludlum",
+  "ISBN": "9780553260113",
+  "publish_date": {
+    "$date": "2010-08-27T00:00:00.000Z"
+  },
+  "pages": 317,
+  "description": "The Bourne Identity\" is a gripping action thriller that follows the story of Jason Bourne, a man who wakes up with amnesia and discovers he possesses extraordinary skills in combat and espionage. He must uncover his true identity while evading deadly assassins and government agencies.",
+  "price": 783,
+  "image": "https://m.media-amazon.com/images/I/51FzWgvTQ+L.jpg",
+  "category": [
+    {
+      "$oid": "6519054d9b599c75b1413568"
+    }
+  ],
+  "stock": 230,
+  "createdAt": {
+    "$date": "2023-10-05T13:41:47.875Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651fee6200dae99b034f3e41"
+  },
+  "title": "johdoed",
+  "author": "sample",
+  "ISBN": "sample",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-4952102400000"
+    }
+  },
+  "pages": 4341,
+  "description": "samle",
+  "price": 340,
+  "image": "https://m.media-amazon.com/images/I/71SUujKRkdL._AC_UF1000,1000_QL80_.jpg",
+  "category": [
+    {
+      "$oid": "651905779b599c75b141356a"
+    }
+  ],
+  "stock": 0,
+  "createdAt": {
+    "$date": "2023-10-06T11:24:18.665Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "652be62e61297e6934caba80"
+  },
+  "title": "Think and Grow Rich",
+  "author": "amaan",
+  "ISBN": "978-1937879501",
+  "publish_date": {
+    "$date": {
+      "$numberLong": "-1035417600000"
+    }
+  },
+  "pages": 312,
+  "description": "A personal development and self-help book that outlines thirteen principles for achieving success and wealth. Based on the author's study of successful individuals, this book has become a classic in the self-help genre",
+  "price": 849,
+  "image": "https://media.shortform.com/covers/png/think-and-grow-rich-cover@8x.png",
+  "category": [
+    {
+      "$oid": "651512840ed9481855a76ae7"
+    }
+  ],
+  "stock": 7897,
+  "createdAt": {
+    "$date": "2023-10-15T13:16:30.814Z"
+  },
+  "__v": 0
+}]

@@ -15,7 +15,6 @@ app.use(cookieParser());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-
 app.use(express.static(path.join(__dirname, "dist")));
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());

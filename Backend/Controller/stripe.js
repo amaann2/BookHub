@@ -110,4 +110,4 @@ exports.webHooks = async (req, res) => {
   res.status(200).json({ recieve: true });
 };
 
-//  to run stripe - stripe listen --forward-to localhost:8080/webhook
+//  to run payment gateway --->  stripe listen --forward-to localhost:8080/webhook
