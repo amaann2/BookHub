@@ -1,0 +1,21 @@
+[
+  {
+    "_id": {
+      "$oid": "651d6e8dae75419c53b0a920"
+    },
+    "firstName": "Admin",
+    "lastName": "bookHUB",
+    "email": "admin@bookhub.io",
+    "password": "$2a$12$aOslA6WVqdT7njNAkU.//eREu.V0/v3bO2ZqNpAHt1/JMZy4AcnGS",
+    "role": "admin",
+    "createdAt": {
+      "$date": "2023-10-04T13:54:21.972Z"
+    },
+    "__v": 0,
+    "passwordResetExpires": {
+      "$date": "2023-10-16T14:54:55.997Z"
+    },
+    "passwordResetToken": "3f9e37a26c0b583e7f406274dda23aca11f547704a08bf6792bce4ae7b6d8d35",
+    "isVerified": true
+  }
+]
