@@ -1,0 +1,43 @@
+.orderstatus p {
+    color: green;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.payment p {
+    color: green;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.items,
+.payment,
+.orderstatus,
+.shipping {
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgb(227, 222, 222);
+}
+
+.items h2,
+.payment h2,
+.orderstatus h2,
+.shipping h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.table {
+    display: flex;
+    height: 5rem;
+    gap: 4rem;
+}
+
+.bookimg img {
+    height: 100%;
+}
+
+.bookName,
+.price {
+    font-size: 1.4rem;
+}

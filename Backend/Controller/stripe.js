@@ -95,7 +95,6 @@ exports.webHooks = async (req, res) => {
     createOrderCheckout(event.data.object);
   }
   if (event.type === "invoice.payment_succeeded") {
-    console.log(event.data.object);
     const customerEmail = event.data.object.customer_email;
     const invoicePdfLink = event.data.object.invoice_pdf;
     const hosted_invoice_url = event.data.object.hosted_invoice_url;

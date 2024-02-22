@@ -24,14 +24,15 @@ import axios from 'axios'
 import Blogs from './pages/Blogs/Blogs'
 import AddBlogs from './pages/Blogs/AddBlogs'
 import EditBlogs from './pages/Blogs/EditBlogs'
+import SingleOrder from './pages/Order/SingleOrder'
+
+axios.defaults.withCredentials = true
 function App() {
-  axios.defaults.withCredentials = true
   useEffect(() => {
     store.dispatch(loadUser())
   }, [])
   const { isAuthentication } = useSelector(state => state.user)
   const { currentUser } = useSelector(state => state.user)
-
   const Layout = () => {
     return (
       <div className='main'>
@@ -90,6 +91,10 @@ function App() {
           element: <Order />
         },
         {
+          path: '/order/:id',
+          element: <SingleOrder />
+        },
+        {
           path: '/review',
           element: <Review />
         },
@@ -109,7 +114,7 @@ function App() {
     },
     {
       path: '/login',
-      element: isAuthentication ? <Home /> : <Login />
+      element: <Login />
     }
   ])
   return (

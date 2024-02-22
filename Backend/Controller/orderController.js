@@ -17,6 +17,21 @@ exports.getUserOrder = catchAsyncError(async (req, res, next) => {
 
 exports.getAllOrder = getAll(Order);
 
+exports.getSingleOrder = catchAsyncError(async (req, res, next) => {
+  const doc = await Order.findById(req.params.id)
+    .populate("user")
+    .populate("books.book");
+  if (!doc) {
+    return next(new AppError("No document found with that ID", 404));
+  }
+  res.status(200).json({
+    status: "Success",
+    data: {
+      data: doc,
+    },
+  });
+});
+
 exports.updateOrder = catchAsyncError(async (req, res, next) => {
   const order = await Order.findById(req.params.id);
   if (!order) {

@@ -8,6 +8,7 @@ const {
   totalRevenue,
   getOrderStatusSummary,
   getRecentOrder,
+  getSingleOrder,
 } = require("../Controller/orderController");
 const router = express.Router();
 
@@ -18,6 +19,10 @@ router.post("/checkout", checkout);
 router.get("/myOrder", isAuthenticated, getUserOrder);
 
 router.route("/").get(isAuthenticated, authorizeRoles("admin"), getAllOrder);
+router
+  .route("/:id")
+  .get(isAuthenticated, authorizeRoles("admin"), getSingleOrder);
+  
 router
   .route("/:id")
   .patch(isAuthenticated, authorizeRoles("admin"), updateOrder);

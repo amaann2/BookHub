@@ -5,21 +5,35 @@ import { getAllOrder } from "../../redux/Order/orderAction";
 import OrdersAction from "./OrdersAction";
 import { FallingLines } from 'react-loader-spinner';
 import toast from 'react-hot-toast'
+import { useNavigate } from "react-router-dom";
 
 const Order = () => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const { orders, error, loading } = useSelector(state => state.orders)
-
+  const handleRowClick = (orderId) => {
+    navigate(`/order/${orderId}`);
+  };
   useEffect(() => {
     if (error) toast.error(error);
     dispatch(getAllOrder());
   }, [dispatch, error]);
+
   const [rowId, setRowId] = useState(null)
   const columns = [
     {
       field: "_id",
       headerName: "Order Id",
       width: 220,
+      renderCell: (params) => (
+        <div
+          style={{ cursor: "pointer", textDecoration: "underline" }}
+          onClick={() => handleRowClick(params.row._id)}
+        >
+          {params.value}
+        </div>
+      ),
+
     },
     {
       field: "payment_status",
