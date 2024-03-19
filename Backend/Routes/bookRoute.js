@@ -27,4 +27,5 @@ router.get("/adminbook/all", adminAllBook);
 router.get("/ser/search", searchBooks);
 router.get("/featbooks/feat", getThreeBook);
 router.get("/bookByCat/:id", getBookByCategory);
+
 module.exports = router;

@@ -52,7 +52,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: isAuthentication && currentUser?.role === 'admin' ? <Layout /> : <Login />,
+      element: <Layout />,
       children: [
         {
           path: '/',

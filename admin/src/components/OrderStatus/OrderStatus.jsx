@@ -3,6 +3,7 @@ import { BiTimeFive, BiErrorCircle, BiXCircle } from 'react-icons/bi'
 import { FiLoader, FiCheckCircle } from 'react-icons/fi'
 import { BsTruck } from 'react-icons/bs'
 const OrderStatus = ({ summary }) => {
+
     return (
         <div className='topbox'>
             <h3>Order Summary</h3>

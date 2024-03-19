@@ -139,3 +139,37 @@ exports.getRecentOrder = catchAsyncError(async (req, res, next) => {
     order,
   });
 });
+
+exports.getTopSellingBooks = catchAsyncError(async (req, res, next) => {
+  const topSellingBooks = await Order.aggregate([
+    // Unwind the books array to denormalize it
+    { $unwind: "$books" },
+    // Group by book and sum up the quantity sold for each book
+    {
+      $group: {
+        _id: "$books.book",
+        totalQuantitySold: { $sum: "$books.quantity" },
+      },
+    },
+
+    // Sort by total quantity sold in descending order
+    { $sort: { totalQuantitySold: -1 } },
+
+    // Limit to the top 3 books
+    { $limit: 3 },
+
+    {
+      $lookup: {
+        from: "books",
+        localField: "_id",
+        foreignField: "_id",
+        as: "bookDetails",
+      },
+    },
+  ]);
+
+  res.status(200).json({
+    success: true,
+    data: topSellingBooks,
+  });
+});

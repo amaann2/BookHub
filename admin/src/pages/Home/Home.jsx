@@ -1,15 +1,15 @@
+import './home.scss'
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DashboardBox from '../../components/ChartBox/DashboardBox'
 import OrderStatus from '../../components/OrderStatus/OrderStatus'
-import RecentOrder from '../../components/RecentOrder/RecentOrder'
-import './home.scss'
-import { useEffect } from "react";
 import { getAllUser } from "../../redux/User/userAction";
 import { getAllBook } from "../../redux/Book/bookAction";
 import { getAllOrder } from "../../redux/Order/orderAction";
 import StockBox from "../../components/StockBox/StockBox";
-import useFetchData from "../../hooks/useFetchData";
 import { FallingLines } from "react-loader-spinner";
+import useFetchData from "../../hooks/useFetchData";
+import TopSelling from "../../components/RecentOrder/TopSelling";
 
 
 const Home = () => {
@@ -19,14 +19,17 @@ const Home = () => {
     const { books } = useSelector(state => state.books)
     const { orders } = useSelector(state => state.orders)
 
-    const { data: revenueData } = useFetchData('/api/v1/order/getRevenue')
-    const { data: summary, isLoading } = useFetchData('/api/v1/order/orderStatusSummary')
+
 
     useEffect(() => {
         dispatch(getAllUser());
         dispatch(getAllBook());
         dispatch(getAllOrder());
     }, [dispatch])
+
+    const { data: revenueData } = useFetchData('/api/v1/order/revenue/total')
+    const { data: summary, isLoading } = useFetchData('/api/v1/order/status/summary')
+    const { data: topSelling } = useFetchData('/api/v1/order/top/three')
 
 
     const UserBoxInfo = {
@@ -68,7 +71,7 @@ const Home = () => {
                     <div className="box box4"><StockBox /></div>
                     <div className="box box5"><DashboardBox {...orderBoxInfo} /></div>
                     <div className="box box6"><DashboardBox {...RevenueBoxInfo} /></div>
-                    <div className="box box7"><RecentOrder /></div>
+                    <div className="box box7"><TopSelling topSelling={topSelling} /></div>
                 </>
             }
         </div>

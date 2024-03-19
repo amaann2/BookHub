@@ -12,6 +12,7 @@ export const loadUser = () => async (dispatch) => {
     const { data } = await axios.get(`/api/v1/users/getMe`, {
       withCredentials: true,
     });
+    console.log(data);
     dispatch({
       type: userActionType.LOAD_USER_SUCCESS,
       payload: data.data.data,

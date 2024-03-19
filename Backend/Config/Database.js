@@ -8,6 +8,10 @@ const databaseConnection = () => {
     })
     .then(() => {
       console.log(`Database is Connected successfully`);
+    })
+    .catch((err) => {
+      console.log(err);
+      console.log(err.message);
     });
 };
 module.exports = databaseConnection;

@@ -1,0 +1,9 @@
+.top-selling-image {
+    width: 5rem;
+    height: 8rem;
+}
+
+.topSelling {
+    display: flex;
+    justify-content: space-around;
+}
