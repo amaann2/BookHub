@@ -45,3 +45,15 @@ exports.getAverageRating = catchAsyncError(async (req, res, next) => {
     averageRating,
   });
 });
+
+exports.getCurrentUserReview = catchAsyncError(async (req, res, next) => {
+  const userId = req.user.id;
+  const review = await Review.find({ user: userId }).populate("book");
+  
+
+  res.status(200).json({
+    status: "Success",
+    result: review.length,
+    review,
+  });
+});

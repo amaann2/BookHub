@@ -1,0 +1,23 @@
+.myreview-image {
+    height: 10rem;
+}
+
+.myreview-box {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    height: auto;
+    margin: 4rem 0;
+    margin: 3rem 2rem;
+    /* width: 20rem; */
+    background-color: white;
+    gap: 4rem;
+
+}

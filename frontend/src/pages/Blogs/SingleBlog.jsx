@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { getSingleBlog } from "../../redux/Blogs/blogAction"
 import { useEffect } from "react"
+import { baseurl } from "../../config"
 const SingleBlog = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
@@ -13,7 +14,7 @@ const SingleBlog = () => {
     }, [dispatch, id])
     return (
         <div className="container">
-            <img src={`https://bookhub-wabd.onrender.com/${blog?.cover}`} alt="cover" className="singleblog-image" />
+            <img src={`${baseurl}/${blog?.cover}`} alt="cover" className="singleblog-image" />
             <h1 className="singleblog-title">{blog?.title}</h1>
             <div className="blog-content" dangerouslySetInnerHTML={{ __html: blog?.content }}></div>
         </div>
